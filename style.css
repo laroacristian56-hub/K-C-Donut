@@ -220,7 +220,6 @@
     height: 16rem;
     background: var(--white);
     border-radius: 1rem;
-    overflow: auto;
 }
 
 #products .product-list .card-product {
@@ -449,9 +448,21 @@ footer a {
     }
 
     #products .product-list {
-        width: 90vw;
+        width: 80vw;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
     }
-
+    #products .product-list .card-product-toppings {
+        width: 20vw;
+        height: 20vh;
+    }
+    #products .product-list .card-product {
+        width: 20vw;
+        height: 20vh;
+    }
     #products .waffle-price .waffle-price-card p {
         font-size: 1.4rem;
     }

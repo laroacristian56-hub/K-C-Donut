@@ -7,6 +7,62 @@
     <link rel="icon" href="assets/logo.png" type="image/jpg">
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+    
+    /* Scroll Animation Styles */
+    .scroll-animate {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .scroll-animate.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .fade-in-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .fade-in-left.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .fade-in-right {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .fade-in-right.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .scale-in {
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .scale-in.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    .stagger-item {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .stagger-item.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
     </style>
     <title>k&C Donut - Donut therapy for your soul</title>
 </head>
@@ -53,37 +109,37 @@
     </main>
 
     <main id="introduction">
-        <div class="leftAbout">
+        <div class="leftAbout fade-in-left scroll-animate">
             <img src="assets/donut.png" alt="donut">
         </div>
-        <div class="main-intro">
+        <div class="main-intro fade-in-right scroll-animate">
             <h1>About K&C Donut</h1>
             <br>
             <p>At <b>K&C Donut</b>, every bite is made to bring you comfort and joy. Founded by <b>Jannah Claire Casayas</b>, our passion is creating freshly baked, mini donuts and waffles that are as beautiful as they are delicious.</p>
             <br>
-            <p>What makes us unique is our promise of <b>freshness and creativity.</b><br> Each donut is crafted with love, baked fresh daily, and designed to fit your taste and style. Whether you’re craving something sweet or looking for the perfect treat for any occasion, K&C Donut is here to make your day a little brighter.</p>
+            <p>What makes us unique is our promise of <b>freshness and creativity.</b><br> Each donut is crafted with love, baked fresh daily, and designed to fit your taste and style. Whether you're craving something sweet or looking for the perfect treat for any occasion, K&C Donut is here to make your day a little brighter.</p>
         </div>
     </main>
 
     <main id="products">
         <br><br>
-        <h1>Our Products</h1>
-        <p>Customize your donuts juts the way you like them!</p><br>
-        <h3>MINI DONUTS</h3><br>
+        <h1 class="scroll-animate">Our Products</h1>
+        <p class="scroll-animate">Customize your donuts juts the way you like them!</p><br>
+        <h3 class="scroll-animate">MINI DONUTS</h3><br>
         <div class="product-packages">
-            <div class="card-package"><h3><b>SOLO</b></h3>
+            <div class="card-package stagger-item scroll-animate"><h3><b>SOLO</b></h3>
                 <p>3 PCS <br> MINI DONUTS</p><br>
                 <p>Choose 1 Flavor & 1 Toppings</p><br>
                 <b>CLASSIC - &#8369;25</b><br>
                 <b>PREMIUM - &#8369;35</b>
             </div>
-            <div class="card-package"><h3><b>COUPLE</b></h3>
+            <div class="card-package stagger-item scroll-animate"><h3><b>COUPLE</b></h3>
                 <p>6 PCS <br> MINI DONUTS</p><br>
                 <p>Choose 2 Flavor & 2 Toppings</p><br>
                 <b>CLASSIC - &#8369;55</b><br>
                 <b>PREMIUM - &#8369;65</b>
             </div>
-            <div class="card-package"><h3><b>BARKADA</b></h3>
+            <div class="card-package stagger-item scroll-animate"><h3><b>BARKADA</b></h3>
                 <p>12 PCS <br> MINI DONUTS</p><br>
                 <p>Choose 3 Flavor & 3 Toppings</p><br>
                 <b>CLASSIC - &#8369;100</b><br>
@@ -91,8 +147,8 @@
             </div>
         </div>
         <br>
-        <h3>FLAVORS</h3>
-        <div class="product-list">
+        <h3 class="scroll-animate">FLAVORS</h3>
+        <div class="product-list scroll-animate">
             <div class="card-product">
                 <img src="assets/choco.jpg" alt="choco">
                 <p>Chocolate</p>
@@ -115,8 +171,8 @@
             </div>
         </div>
         <br>
-        <h3>CLASSIC TOPPINGS</h3>
-        <div class="product-list">
+        <h3 class="scroll-animate">CLASSIC TOPPINGS</h3>
+        <div class="product-list scroll-animate">
             <div class="card-product-toppings">
                 <img src="assets/sprinkles.png" alt="choco">
                 <p>Rainbow Sprinklets</p>
@@ -143,8 +199,8 @@
             </div>
         </div>
         <br>
-        <h3>PREMIUM TOPPINGS</h3>
-        <div class="product-list">
+        <h3 class="scroll-animate">PREMIUM TOPPINGS</h3>
+        <div class="product-list scroll-animate">
             <div class="card-product-toppings">
                 <img src="assets/crushed-biscoff.png" alt="choco">
                 <p>Crushed Biscoff</p>
@@ -167,23 +223,23 @@
             </div>
         </div>
         <br>
-        <hr>
+        <hr class="scroll-animate">
         <br>
-        <h3>DESSERT WAFFLE</h3>
-        <p>Your favorite waffles, now made even better! <br>Customize your flavor and toppings</p>
+        <h3 class="scroll-animate">DESSERT WAFFLE</h3>
+        <p class="scroll-animate">Your favorite waffles, now made even better! <br>Customize your flavor and toppings</p>
         <br>
-        <div class="waffle-img">
+        <div class="waffle-img scale-in scroll-animate">
             <img src="assets/waffle.png" alt="waffle">
         </div>
-        <p><b>Available Drips:</b> Chocolate * Matcha * Strawberry * Caramel</p>
+        <p class="scroll-animate"><b>Available Drips:</b> Chocolate * Matcha * Strawberry * Caramel</p>
         <br>
         <div class="waffle-price">
-            <div class="waffle-price-card">
+            <div class="waffle-price-card stagger-item scroll-animate">
                 <h3><b>CLASSIC TOPPINGS</b></h3>
                 <br>
                 <p><b>&#8369;55</b></p>
             </div>
-            <div class="waffle-price-card">
+            <div class="waffle-price-card stagger-item scroll-animate">
                 <h3><b>PREMIUM TOPPINGS</b></h3>
                 <br>
                 <p><b>&#8369;65</b></p>
@@ -194,7 +250,7 @@
 
     <main class="whyChooseUs">
         <br>
-            <div class="whyChooseUsText">
+            <div class="whyChooseUsText scroll-animate">
                 <h1>Why Choose Us?</h1>
                 <br>
                 <p>At <b>K&C Donut</b>, we believe every bite should bring comfort and joy. Our donuts and waffles freshly baked daily, ensuring the best taste and quality. We also offer customized designs and flavors, perfect for any mood, occasion, or craving.</p>
@@ -206,12 +262,12 @@
     </main>
 
     <main class="reviews"><br><br>
-        <div class="reviewBox">
+        <div class="reviewBox scroll-animate">
             <h2>Read what our customers love about our products</h2>
             <br>
             <p>Sweet treats, happy hearts! See what our customers are saying about K&C Donut</p>
             <br>
-            <div class="reviewList">
+            <div class="reviewList stagger-item scroll-animate">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
@@ -221,7 +277,7 @@
                 </svg>
                 Super cute and yummy designs. My kids loved it!</p>
             </div>
-            <div class="reviewList">
+            <div class="reviewList stagger-item scroll-animate">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
@@ -231,7 +287,7 @@
                 </svg>
                 Great value for cute mini donuts. Will order again.</p>
             </div>
-            <div class="reviewList">
+            <div class="reviewList stagger-item scroll-animate">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
@@ -246,23 +302,23 @@
 
     <main class="contactUs" id="contactUs">
         <br><br><br>
-        <h1>Contact Us</h1>
+        <h1 class="scroll-animate">Contact Us</h1>
         <br>
-        <p>We may not have a physical store, but we're always just a message away!</p>
+        <p class="scroll-animate">We may not have a physical store, but we're always just a message away!</p>
         <br>
-        <p>Order your favorite mini donuts and waffles from the comfort of your home and have them delivered straight to your doorstep.</p>
+        <p class="scroll-animate">Order your favorite mini donuts and waffles from the comfort of your home and have them delivered straight to your doorstep.</p>
         <br><br>
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+        <p class="stagger-item scroll-animate"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
 </svg>&nbsp;&nbsp; Mobile: 09683108779</p>
         <br>
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+        <p class="stagger-item scroll-animate"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
   <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
 </svg>&nbsp;&nbsp; Email: casayasjannahclaire@gmail.com</p>
         <br>
-        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+        <p class="stagger-item scroll-animate"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
   <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-</svg>&nbsp;&nbsp; TikTok: &nbsp;<a href="https://www.tiktok.com/@k.c.doughnut?_t=ZS-90WoQZ7aF9s&_r=1">K & C Donut</a></p>
+</svg>&nbsp;&nbsp; TikTok: &nbsp;<a href="">K & C Donut</a></p>
     </main>
 
     <footer>
@@ -274,6 +330,38 @@
         <p>&#169; K&C Donut 2025 | All Rights Reserved</p>
     </footer>
      <script src="script.js"></script>
-</body>
+     <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Add stagger delay for items with stagger-item class
+                    if (entry.target.classList.contains('stagger-item')) {
+                        const staggerDelay = Array.from(entry.target.parentElement.children)
+                            .filter(child => child.classList.contains('stagger-item'))
+                            .indexOf(entry.target) * 150;
+                        
+                        setTimeout(() => {
+                            entry.target.classList.add('active');
+                        }, staggerDelay);
+                    } else {
+                        entry.target.classList.add('active');
+                    }
+                    
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with scroll animation classes
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.scroll-animate, .fade-in-left, .fade-in-right, .scale-in, .stagger-item');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+     </script>
+</body>
 </html>
